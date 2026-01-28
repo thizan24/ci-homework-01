@@ -6,6 +6,7 @@ from strategy import ThresholdStrategy
 def mock_broker():
     return MagicMock()
 
+
 def test_buy_signal(mock_broker):
     strategy = ThresholdStrategy(mock_broker, threshold=100)
     strategy.run([101, 99])
